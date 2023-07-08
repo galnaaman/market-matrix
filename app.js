@@ -17,12 +17,14 @@
 
     async function getData() {
         // console.log(GLOBAL_CONFIG.cryptoAPI)
-        const response = await fetch(GLOBAL_CONFIG.cryptoAPI);
-        const data = await response.json();
-        // console.log(data);
-
-        return data;
-    // container.innerText = data[0]["name"] ;
+        try {
+            const response = await fetch(GLOBAL_CONFIG.cryptoAPI);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error:', error);
+        }
+   
     }
 
     async function displayData() {
@@ -39,6 +41,7 @@
                         <button type="button" class="btn-close float-end invisible "onclick=""></button>
                     </div>
                     <div class="card-body">
+                        <img src="${data[i].image}" width="40" alt="" class="img-fluid">
                         <h4 class="title">${data[i].name}</h4>
                         <h6 class="category">${data[i].current_price}</h6>
                         <p class="description">${data[i].symbol} </p>
