@@ -243,7 +243,7 @@
     async function getData() {
         // console.log(GLOBAL_CONFIG.cryptoAPI)
         try {
-            const response = await fetch(GLOBAL_CONFIG.testingApi);
+            const response = await fetch(GLOBAL_CONFIG.cryptoAPI);
             const data = await response.json();
             return data;
         } catch (error) {
