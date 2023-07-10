@@ -12,7 +12,7 @@
 
 <body>
   <!-- Start Navbar -->
-  <nav class="navbar navbar-expand-lg bg-dark text-white ">
+  <nav class="navbar navbar-expand-lg bg-dark text-white">
     <div class="container-fluid ">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,20 +25,23 @@
       <div class="collapse navbar-collapse " id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" id="home" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="#">Stocks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active">Crypto</a>
+            <a class="nav-link active" id="crypto" href="#">Crypto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" id="crypto" href="#">Reports</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active">About</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
@@ -46,20 +49,59 @@
   </nav>
   <!-- End Navbar -->
 
+  <div style="background: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?cs=srgb&dl=pexels-markus-spiske-1089438.jpg&fm=jpg)" class="jumbotron bg-cover text-white">
+    <div class="container py-5 text-center">
+        <h1 class="display-4 font-weight-bold">Market Martix</h1>
+        <p class="font-italic mb-0">The ultimate market to track</p>
+        <p class="font-italic">Snippe by
+            <a href="https://bootstrapious.com" class="text-white">
+                <u>Gal Naaman</u>
+            </a>
+        </p>
+        <a href="#" role="button" class="btn btn-primary px-5">See All Features</a>
+    </div>
+</div>
+
+
 <!--Loader-->
+
 <div class="loader" id="loader"></div>
 
 
+
   <!-- Start Main -->
-  <div id="mainContent" class="row row-cols-1 row-cols-md-3 g-4">
+  <div id="mainContent" class="row row-cols-1 row-cols-md-3 g-4 mt-3 ms-2 me-2">
 
   </div>
   <!-- End Main -->
-
+  <div id="popup" class="d-none">
+    <!-- Button trigger modal -->
+    <button id="test1" type="button" class="btn btn-primary d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+      </button>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+          <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Only Allowed 5 Crypto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div id="modelBody" class="modal-body row">
+              ...
+          </div>
+          <div class="modal-footer">
+              <button type="button" id="closeBtn" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="saveBtn" class="btn btn-primary">Save changes</button>
+          </div>
+          </div>
+      </div>
+      </div>
+  </div>
 
 
   <!--Import Scripts-->
-  <script src="app.js"></script>
+  <script src="home.js"></script>
+  <script src="crypto.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
     crossorigin="anonymous"></script>
