@@ -1,0 +1,100 @@
+{
+    "data": [
+        {
+            "title": "Ripple's chief legal officer says ‘the SEC is getting battered in the court'",
+            "news_url": "https://finbold.com/ripples-chief-legal-officer-says-the-sec-is-getting-battered-in-the-court/?utm_source=snapi",
+            "image_url": "https://crypto.snapi.dev/images/v1/e/q/sec-battered-court-355791.jpg",
+            "text": "The credibility of the Securities and Exchange Commission (SEC) in the United States is being constantly tested, amid the regulator's scrutiny on the cryptocurrency industry.",
+            "sentiment": "Positive",
+            "type": "Article",
+            "source_name": "Finbold",
+            "date": "Wed, 30 Aug 2023 10:31:46 -0400",
+            "tickers": [
+                "XRP"
+            ],
+            "topics": [
+                "regulations"
+            ]
+        },
+        {
+            "title": "Grayscale vs. SEC Decision Boosts XRP",
+            "news_url": "https://cryptomufasa.com/grayscale-vs-sec-decision-boosts-xrp/?utm_source=snapi",
+            "image_url": "https://crypto.snapi.dev/images/v1/m/b/grayscale-vs-sec-decision-boosts-xrp-1-1024x576-355660.png",
+            "text": "XRP gets a new boost to help it grow. After the recent court decision in the Grayscale vs. SEC case regarding a spot Bitcoin ETF, XRP's value increased by more than 6%. The cryptocurrency market, especially XRP, benefited from this decision.",
+            "sentiment": "Positive",
+            "type": "Article",
+            "source_name": "Crypto Mufasa",
+            "date": "Wed, 30 Aug 2023 07:10:48 -0400",
+            "tickers": [
+                "XRP"
+            ],
+            "topics": [
+                "regulations"
+            ]
+        },
+        {
+            "title": "Ripple Transfers 31 Million XRP in Wake of Grayscale's SEC Legal Battle Victory",
+            "news_url": "https://coinpedia.org/altcoin/ripple-transfers-31-million-xrp-in-wake-of-grayscales-sec-legal-battle-victory/",
+            "image_url": "https://crypto.snapi.dev/images/v1/a/n/rp-price-to-new-high-1-355624.webp",
+            "text": "Ripple, a major playe­r in the cryptocurrency industry, has made he­adlines with its recent activity surrounding XRP. According to a report by Whale Alert, Ripple transfe­rred 31 million XRP tokens, which are value­d at approximately $16.5 million. These de­velopments have coincide­d with Grayscale's recent le­gal triumph over the U.S. Securitie­s and Exchange Commission (SEC).",
+            "sentiment": "Positive",
+            "type": "Article",
+            "source_name": "CoinPedia",
+            "date": "Wed, 30 Aug 2023 06:07:59 -0400",
+            "tickers": [
+                "XRP"
+            ],
+            "topics": [
+                "regulations"
+            ]
+        },
+        {
+            "title": "Grayscale Considers Adding XRP to Fund After SEC Win",
+            "news_url": "https://cryptosheadlines.com/grayscale-considers-adding-xrp-to-fund-after-sec-win/?utm_source=snapi",
+            "image_url": "https://crypto.snapi.dev/images/v1/8/t/olive-green-mint-green-modular-abstract-business-case-study-and-report-business-presentation-16-1-355560.jpg",
+            "text": "This legal triumph follows a similar win for Ripple, the company behind XRP, against the SEC. As a result, members of the XRP community are encouraging Grayscale to consider adding XRP back to its selection of cryptocurrencies in its investment fund.",
+            "sentiment": "Positive",
+            "type": "Article",
+            "source_name": "Crypto Headlines",
+            "date": "Wed, 30 Aug 2023 04:04:22 -0400",
+            "tickers": [
+                "XRP"
+            ],
+            "topics": [
+                "regulations"
+            ]
+        },
+        {
+            "title": "Pro-XRP Attorneys, Ripple CLO, Analysts Weigh In On Coinbase Vs SEC Lawsuit Dismissal",
+            "news_url": "https://coingape.com/?p=157994",
+            "image_url": "https://crypto.snapi.dev/images/v1/t/g/sec-coinbase-ripple-355532.jpg",
+            "text": "After Grayscale Investments' landmark victory against the U.S. Securities and Exchange Commission (SEC), experts contemplate the court to approve the motion by crypto exchange Coinbase to dismiss the SEC lawsuit. XRP attorneys, Ripple CLO, CEO, and analysts believe the SEC and Gary Gensler's action will prove to be unfaithful to the law and lack of",
+            "sentiment": "Positive",
+            "type": "Article",
+            "source_name": "Coingape",
+            "date": "Wed, 30 Aug 2023 03:02:28 -0400",
+            "tickers": [
+                "XRP"
+            ],
+            "topics": [
+                "regulations"
+            ]
+        },
+        {
+            "title": "XRP Lawyer Hints at How Coinbase Might Win in SEC Lawsuit",
+            "news_url": "https://u.today/xrp-lawyer-hints-at-how-coinbase-might-win-in-sec-lawsuit?utm_source=snapi",
+            "image_url": "https://crypto.snapi.dev/images/v1/r/i/e0713-355239.jpg",
+            "text": "XRP holders' attorney John Deaton hints at a seeming edge that Coinbase has in the SEC lawsuit against it.",
+            "sentiment": "Neutral",
+            "type": "Article",
+            "source_name": "UToday",
+            "date": "Tue, 29 Aug 2023 12:30:00 -0400",
+            "tickers": [
+                "XRP"
+            ],
+            "topics": [
+                "regulations"
+            ]
+        }
+    ]
+}

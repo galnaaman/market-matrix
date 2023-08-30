@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e5721969-5ce9-49a5-9be0-d61a4e971d7f" name="Changes" comment="fixed bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/about.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crypto.js" beforeDir="false" afterPath="$PROJECT_DIR$/crypto.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/loader.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reports.js" beforeDir="false" afterPath="$PROJECT_DIR$/reports.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests.http" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +60,7 @@
       <workItem from="1690449077134" duration="664000" />
       <workItem from="1691075908165" duration="2214000" />
       <workItem from="1693169370868" duration="2931000" />
-      <workItem from="1693400716474" duration="472000" />
+      <workItem from="1693400716474" duration="3485000" />
     </task>
     <task id="LOCAL-00001" summary="add logo to crypto">
       <option name="closed" value="true" />
