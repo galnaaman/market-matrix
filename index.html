@@ -28,14 +28,14 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" id="home" href="#">Home</a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link active" href="#">Stocks</a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link active" id="crypto" href="#">Crypto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" id="crypto" href="#">Reports</a>
+            <a class="nav-link active" id="reports" href="#">Reports</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" id="about" href="#">About</a>
@@ -52,21 +52,17 @@
 
   <div style="background: url(https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg?cs=srgb&dl=pexels-markus-spiske-1089438.jpg&fm=jpg)" class="jumbotron bg-cover text-white">
     <div class="container py-5 text-center">
-        <h1 class="display-4 font-weight-bold">Market Martix</h1>
-        <p class="font-italic mb-0">The ultimate market to track</p>
-        <p class="font-italic">Snippe by
-            <a href="https://bootstrapious.com" class="text-white">
-                <u>Gal Naaman</u>
-            </a>
-        </p>
-        <a href="#" role="button" class="btn btn-primary px-5">See All Features</a>
+        <h1 id="page-title" class="display-4 font-weight-bold">welcome to Market Martix</h1>
+        <p id = "page-subtitle" class="font-italic mb-0">The ultimate market to track</p>
+        <a id="page-btn" href="#" role="button" class="btn btn-primary px-5">See All Features</a>
     </div>
 </div>
 
 
 <!--Loader-->
-
-<div class="loader" id="loader"></div>
+<div class="loader-container">
+  <div class="loader" id="loader"></div>
+</div>
 
 
 
@@ -101,6 +97,7 @@
 
 
   <!--Import Scripts-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.js" integrity="sha512-6HrPqAvK+lZElIZ4mZ64fyxIBTsaX5zAFZg2V/2WT+iKPrFzTzvx6QAsLW2OaLwobhMYBog/+bvmIEEGXi0p1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <script src="reports.js"></script>
   <script src="home.js"></script>
   <script src="about.js"></script>
   <script src="loader.js"></script>

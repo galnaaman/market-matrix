@@ -18,15 +18,16 @@
 
     function showLoader() {
         const loader = document.getElementById("loader");
-        // const parent = loader.parentElement;
-        // parent.style.display = "flex";
+        const parent = loader.parentElement;
+        parent.style.display = "flex";
         loader.style.display = "block";
     }
 
     function hideLoader() {
         const loader = document.getElementById("loader");
-        // const parent = loader.parentElement;
-        // parent.style.display = "none";
+        const parent = loader.parentElement;
+        console.log("finish loading");
+        parent.style.display = "none";
         loader.style.display = "none";
     }
 
@@ -37,17 +38,17 @@
     const searchInput = document.getElementById("searchInput");
     const addBtn = document.getElementById("addBtn");
 
-   
 
-    // crypto currency event listener for click 
+
+    // crypto currency event listener for click
     crypto.addEventListener("click", async function(){
         showLoader();
         const data = await getData();
-        displayData(data,false);
-        cryptoViewMore();
+        await displayData(data, false);
+        await cryptoViewMore();
         addCryptoToReport();
     });
-    
+
     searchInput.addEventListener("keyup", async function(){
         if(searchInput.value == ""){
             const data = await getData();
@@ -59,12 +60,12 @@
             displayData(results,true);
             cryptoViewMore();
             addCryptoToReport();
-            
+
         }
-       
+
 
     })
-    
+
 
     function savetoLocalStorage(data,id){
         const newData = {};
@@ -77,16 +78,16 @@
 
     function getFromLocalStorage(id){
         const data = JSON.parse(localStorage.getItem(id));
-        if (data) { 
+        if (data) {
             const time = new Date();
             const diff = time.getTime() - data.time;
             const minutes = Math.floor(diff / 1000 / 60);
             if(minutes > 2){
                 console.log("expired");
-                return {"data":data,"isExpired":true};          
+                return {"data":data,"isExpired":true};
             }else{
                 console.log("not expired");
-                return {"data":data,"isExpired":false};          
+                return {"data":data,"isExpired":false};
             }
         }else {
             console.log("no data");
@@ -108,10 +109,10 @@
             return [];
         }
     }
-    
+
 
     function maxCryptoToReport(){
-        
+
         const popup = document.getElementById("popup");
         const modal = document.getElementById("test1");
         const modelBody = document.getElementById("modelBody");
@@ -130,12 +131,37 @@
                 </div>
             </div>
             `;
-        };
+
+        }
+
         modelBody.innerHTML = html;
         console.log(data);
         console.log(popup);
         modal.click();
         popup.className = "";
+        for(const crypto of data) {
+            console.log(crypto);
+            let crypto_listner = document.getElementById("delete-"+crypto);
+            crypto_listner.addEventListener("click",function(){
+                console.log("delete");
+                const index = selectedCrypto.indexOf(crypto);
+                selectedCrypto.splice(index,1);
+                saveToSessionStorage(selectedCrypto);
+                console.log(selectedCrypto);
+                maxCryptoToReport();
+                const btns = document.getElementsByClassName("add-report");
+                for(const btn of btns){
+                    let id = btn.id.replace("check-","");
+                    if(selectedCrypto.includes(id)){
+                        btn.checked = true;
+                    }
+                    else {
+                        btn.checked = false;
+                    }
+                }
+
+            });
+        }
         const saveBtn = document.getElementById("saveBtn");
         const closeBtn = document.getElementById("closeBtn");
         saveBtn.addEventListener("click",function(){
@@ -150,6 +176,8 @@
 
     function addCryptoToReport(){
         const addReportBtns = document.getElementsByClassName("add-report");
+        const cache = getFromSessionStorage(selectedCrypto);
+        console.log(cache);
         for(const btn of addReportBtns){
             btn.addEventListener("click",function(){
                 btn.id = btn.id.replace("check-","");
@@ -159,6 +187,9 @@
                         maxCryptoToReport();
                     }
                     else {
+                        
+                        
+                        // const btnSymbol = document.getElementById(");
                         selectedCrypto.push(btn.id);
                         saveToSessionStorage(selectedCrypto);
                         console.log(selectedCrypto);
@@ -170,11 +201,11 @@
                     saveToSessionStorage(selectedCrypto);
                     console.log(selectedCrypto);
                 }
-                    
+
              });
         }
         const list = getFromSessionStorage();
-        if (list.length == 0){
+        if (list.length === 0){
             console.log("empty");
         }
         else{
@@ -200,9 +231,9 @@
            btn.addEventListener("click", async function(){
             const priceContainer = document.getElementById("price-"+btn.id);
             console.log(priceContainer.style.display);
-            if (priceContainer.className == "mt-1 d-none") {
+            if (priceContainer.className === "mt-1 d-none") {
                 const check = getFromLocalStorage(btn.id);
-                if(check.isExpired == true || check.isExpired == "None"){
+                if(check.isExpired === true || check.isExpired === "None"){
                     const response = await fetch("https://api.coingecko.com/api/v3/coins/" + btn.id);
                     const extraData = await response.json();
                     savetoLocalStorage(extraData,btn.id);
@@ -212,7 +243,7 @@
                     const pounds = "<p>"+extraData.market_data.current_price.gbp + "£"+"</p>";
                     priceContainer.innerHTML = dollars + shekels + pounds;
                 }
-                else if(check.isExpired == false){
+                else if(check.isExpired === false){
                     priceContainer.className = "d-block mt-1 ";
                     const dollars = "<p>"+check.data.dollars + "$"+"</p>";
                     const shekels = "<p>"+check.data.shekels + "₪"+"</p>";
@@ -222,11 +253,11 @@
             } else {
                 priceContainer.className = "mt-1 d-none";
             }
-           }); 
+           });
         }
     }
 
-  
+
     async function searchCrypto(value) {
         try {
             const response = await fetch(GLOBAL_CONFIG.searchCryptoApi + value)
@@ -249,16 +280,16 @@
         } catch (error) {
             console.error('Error:', error);
         }
-   
+
     }
 
 
-    
 
 
-    // display crypto currency data 
+
+    // display crypto currency data
     async function displayData(data,isSearch) {
-    
+
         let html = '';
         if(!isSearch){
             for (let i = 0 ; i <data.length; i++){
@@ -269,13 +300,13 @@
                         <div class="card-header">
                             <div class="form-check form-switch">
                             <input class="form-check-input add-report" type="checkbox" role="switch" id="check-${data[i].id}">
-                            <i class = "badge text-bg-success">${data[i].symbol}</i>
+                            <i id=symbol-${data[i].symbol} class = "badge symbol text-bg-success">${data[i].symbol}</i>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-3">
-                                    <img src="${data[i].image}" width="60" alt="" class="img-fluid">
+                                    <img id="${data[i].id}-img" src="${data[i].image}" width="60" alt="" class="img-fluid">
                                 </div>
                                 <div class="col-9">
                                     <h4 class="title">${data[i].name}  </h4>
@@ -299,7 +330,7 @@
                         <div class="card-header">
                             <div class="form-check form-switch">
                             <input class="form-check-input add-report" type="checkbox" role="switch" id="check-${data[i].id}">
-                            <i class = "badge text-bg-success">${data[i].symbol}</i>
+                            <i id=symbol-${data[i].symbol} class = "badge text-bg-success">${data[i].symbol}</i>
                             </div>
                         </div>
                         <div class="card-body">
@@ -320,7 +351,7 @@
                 `;
             };
         }
-       
+
         hideLoader();
         container.innerHTML = html;
 
@@ -330,7 +361,7 @@
 
 
 
-    
+
 
 
 
