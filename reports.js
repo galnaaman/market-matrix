@@ -9,6 +9,8 @@ reports.addEventListener("click", async function () {
   if (coins.length === 0) {
     hideLoader();
     alert("Please select at least one crypto to compare");
+    const crypto = document.getElementById("crypto");
+    crypto.click();
     return;
   }
 
