@@ -22,7 +22,7 @@ reports.addEventListener("click", async function () {
   setInterval(async () => {
     const newPrices = await getCoinsReportData(coins);
     updateReportTable(chart, newPrices);
-  }, 1000000);
+  }, 5000);
   }
 
   
