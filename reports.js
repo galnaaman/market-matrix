@@ -11,7 +11,6 @@ reports.addEventListener("click", async function () {
     alert("Please select at least one crypto to compare");
     const crypto = document.getElementById("crypto");
     crypto.click();
-    return;
   }
 
   const initialPrices = await getCoinsReportData(coins);
